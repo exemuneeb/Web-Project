@@ -1,0 +1,300 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+           font-family: 'Montserrat', sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #e5e7eb; /* Light gray text */
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        /* Typography */
+        h1 {
+            color: #ffffff;
+            font-size: 2.8rem; /* ~45px */
+            font-weight: 700;
+            margin-bottom: 0.75rem; /* 12px */
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* Spotify Colors */
+        .spotify-green {
+            color: #1DB954;
+        }
+        .spotify-light-green {
+            color: #A7F3D0;
+        }
+        .spotify-light-green-hover:hover {
+            color: #6EE7B7;
+        }
+
+        /* Playlist Header Styling */
+        .playlist-header {
+            display: flex;
+            flex-direction: column; /* Mobile first */
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .playlist-cover-img {
+            width: 160px; /* Increased size */
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px; /* Slightly less rounded for album art */
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            flex-shrink: 0;
+        }
+
+        .playlist-info .playlist-type {
+            font-size: 0.75rem; /* 12px */
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #b3b3b3;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
+        }
+        .playlist-info .playlist-description {
+            font-size: 0.875rem; /* 14px */
+            color: #b3b3b3;
+            margin-bottom: 8px;
+        }
+        .playlist-meta {
+            font-size: 0.875rem; /* 14px */
+            color: #b3b3b3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+        }
+        .playlist-meta .creator-name {
+            font-weight: 600;
+            color: #ffffff; /* White for creator name */
+        }
+        .playlist-meta .separator {
+            color: #535353;
+        }
+
+
+        /* Action Buttons Styling */
+        .action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+            flex-wrap: wrap; /* Allow buttons to wrap */
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 9999px; /* Pill shape */
+            font-size: 0.875rem; /* 14px */
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.1s ease, background-color 0.2s ease, color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-primary {
+            background-color: #1DB954; /* Spotify Green */
+            color: #000000; /* Black text for green button */
+        }
+        .btn-primary:hover {
+            background-color: #1ED760;
+        }
+        .btn-primary i {
+            margin-right: 8px;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 1px solid #535353;
+            color: #e5e7eb;
+        }
+        .btn-secondary:hover {
+            border-color: #b3b3b3;
+            color: #ffffff;
+        }
+        .btn-secondary i {
+            margin-right: 8px;
+        }
+
+        .icon-btn {
+            background-color: transparent;
+            color: #b3b3b3;
+            font-size: 1.5rem; /* 24px */
+            padding: 8px;
+            border-radius: 50%;
+            transition: color 0.2s ease;
+        }
+        .icon-btn:hover {
+            color: #1DB954; /* Spotify Green on hover */
+        }
+        .icon-btn.liked {
+            color: #1DB954; /* Green when liked */
+        }
+
+
+        /* Song Table Styling */
+        .song-table-container {
+            overflow-x: auto; /* Allows horizontal scrolling on small screens */
+        }
+        .song-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        .song-table th, .song-table td {
+            padding: 12px 8px; /* Adjusted padding */
+            vertical-align: middle;
+        }
+        .song-table thead th {
+            color: #b3b3b3;
+            font-weight: 500;
+            font-size: 0.75rem; /* 12px */
+            text-transform: uppercase;
+            border-bottom: 1px solid #282828;
+        }
+        .song-table tbody tr {
+            transition: background-color 0.15s ease-in-out;
+        }
+        .song-table tbody tr:hover {
+            background-color: #1a1a1a;
+            border-radius: 4px; /* Note: border-radius on tr doesn't work well, apply to td if needed */
+        }
+       
+        .song-table .track-number {
+            text-align: center;
+            color: #b3b3b3;
+            width: 40px;
+            font-size: 0.875rem;
+        }
+        .song-table tr:hover .track-number {
+            color: #ffffff;
+        }
+
+        .song-title-cell {
+            display: flex;
+            align-items: center;
+        }
+        .song-album-art {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 12px;
+        }
+        .song-title-details .title {
+            font-weight: 500;
+            color: #ffffff;
+            display: block; /* For better spacing */
+            margin-bottom: 2px;
+        }
+        .song-table tr:hover .song-title-details .title {
+            color: #A7F3D0; /* Light greenish on hover */
+        }
+        .song-title-details .artist-mobile {
+            font-size: 0.8rem;
+            color: #b3b3b3;
+            display: none; /* Hidden by default, shown on smaller screens */
+        }
+
+        .song-table .artist-col, .song-table .album-col {
+            color: #b3b3b3;
+            font-size: 0.875rem;
+        }
+        .song-table tr:hover .artist-col, .song-table tr:hover .album-col {
+            color: #ffffff;
+        }
+
+        .song-table .duration-col {
+            text-align: right;
+            color: #b3b3b3;
+            font-size: 0.875rem;
+            width: 60px;
+        }
+        .song-table tr:hover .duration-col {
+            color: #ffffff;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) { /* md breakpoint */
+            .playlist-header {
+                gap: 16px;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .playlist-cover-img {
+                width: 140px;
+                height: 140px;
+            }
+            .song-table .artist-col, .song-table .album-col {
+                display: none; /* Hide artist and album columns on smaller screens */
+            }
+            .song-title-details .artist-mobile {
+                display: block; /* Show artist below title on smaller screens */
+            }
+            .action-buttons {
+                justify-content: center; /* Center buttons on smaller screens */
+            }
+        }
+
+        @media (min-width: 769px) { /* Larger screens */
+            .container {
+                padding: 32px;
+            }
+            .playlist-header {
+                flex-direction: row;
+                align-items: flex-end; /* Align items to bottom */
+                text-align: left;
+                gap: 32px;
+            }
+            .playlist-cover-img {
+                width: 200px;
+                height: 200px;
+            }
+            h1 {
+                font-size: 3.5rem; /* ~56px */
+            }
+            .playlist-meta {
+                justify-content: flex-start;
+            }
+        }
+        
+        /* Custom scrollbar (WebKit browsers) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #282828;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a3a3a;
+        }

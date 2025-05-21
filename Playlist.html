@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WaveStream - Playlist</title>
+  <link rel="stylesheet" href="Playlistcss.css">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">WaveStream</div>
+    <nav class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="discover.html">Discover</a>
+      <a href="browse.html">Browse</a>
+      <a href="playlist.html">Playlist</a>
+      <a href="user.html">User</a>
+    </nav>
+  </header>
+
+   <div class="container">
+        <header class="playlist-header">
+            <img src="Playlist Pics/first pic.png" alt="Playlist Cover" class="playlist-cover-img">
+            <div class="playlist-info">
+                <p class="playlist-type">Playlist</p>
+                <h1>My Playlist</h1>
+                <p class="playlist-description">My go-to playlist for relaxing and unwinding.</p>
+                <div class="playlist-meta">
+                    <span class="creator-name spotify-light-green">MyMusicApp</span>
+                    <span class="separator">•</span>
+                    <span>105 songs,</span>
+                    <span>about 6 hr 30 min</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="action-buttons">
+            <button class="btn btn-primary">
+                <i class="fas fa-play"></i> Play
+            </button>
+            <button class="btn btn-secondary">
+                <i class="fas fa-random"></i> Shuffle
+            </button>
+            <button class="icon-btn" title="Save to Your Library">
+                <i class="far fa-heart"></i>
+                </button>
+            <button class="icon-btn" title="More options">
+                <i class="fas fa-ellipsis-h"></i>
+            </button>
+        </div>
+
+        <div class="song-table-container">
+            <table class="song-table">
+                <thead>
+                    <tr>
+                        <th class="track-number">#</th>
+                        <th>Title</th>
+                        <th class="artist-col">Artist</th>
+                        <th class="album-col">Album</th>
+                        <th class="duration-col"><i class="far fa-clock"></i></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="track-number">1</td>
+                        <td class="song-title-cell">
+                            <img src="Playlist Pics/afterhours.jpg" alt="Song 1" class="song-album-art">
+                            <div class="song-title-details">
+                                <span class="title">Blinding Lights</span>
+                                <span class="artist-mobile"></span>
+                            </div>
+                        </td>
+                        <td class="artist-col">The Weekend</td>
+                        <td class="album-col">AfterHours</td>
+                        <td class="duration-col">3:45</td>
+                    </tr>
+                    <tr>
+                        <td class="track-number">2</td>
+                        <td class="song-title-cell">
+                            <img src="Playlist Pics/astro.jpg" alt="Song 2" class="song-album-art">
+                            <div class="song-title-details">
+                                <span class="title">SICKO MODE</span>
+                                <span class="artist-mobile">Chillhop Masters</span>
+                            </div>
+                        </td>
+                        <td class="artist-col">Travis Scott</td>
+                        <td class="album-col">ASTROWORLD</td>
+                        <td class="duration-col">4:12</td>
+                    </tr>
+                    <tr>
+                        <td class="track-number">3</td>
+                        <td class="song-title-cell">
+                            <img src="Playlist Pics/khana badosh.jpg" alt="Song 3" class="song-album-art">
+                            <div class="song-title-details">
+                                <span class="title">Bandish</span>
+                                <span class="artist-mobile">Study Sounds</span>
+                            </div>
+                        </td>
+                        <td class="artist-col">Talha Anjum</td>
+                        <td class="album-col">Khana Badosh</td>
+                        <td class="duration-col">2:58</td>
+                    </tr>
+                    <tr>
+                        <td class="track-number">4</td>
+                        <td class="song-title-cell">
+                            <img src="Playlist Pics/scorpion.jpg" alt="Song 4" class="song-album-art">
+                            <div class="song-title-details">
+                                <span class="title">God's Plan</span>
+                                <span class="artist-mobile">Cosmic Waves</span>
+                            </div>
+                        </td>
+                        <td class="artist-col">Drake</td>
+                        <td class="album-col">Scorpion</td>
+                        <td class="duration-col">5:03</td>
+                    </tr>
+                     <tr>
+                        <td class="track-number">5</td>
+                        <td class="song-title-cell">
+                            <img src="Playlist Pics/hearts.jpg" alt="Song 5" class="song-album-art">
+                            <div class="song-title-details">
+                                <span class="title">Woh Noor</span>
+                                <span class="artist-mobile">Street Beatz</span>
+                            </div>
+                        </td>
+                        <td class="artist-col">Ap Dhillon</td>
+                        <td class="album-col">Two Hearts Never Break The Same</td>
+                        <td class="duration-col">3:30</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 WaveStream. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,264 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+           font-family: 'Montserrat', sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #e5e7eb; /* Light gray text */
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 16px; /* Adjusted padding */
+        }
+
+        /* Typography */
+        h1.page-title {
+            color: #ffffff;
+            font-size: 2rem; /* ~32px */
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        h2.section-title {
+            color: #ffffff;
+            font-size: 1.5rem; /* 24px */
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Spotify Colors */
+        .spotify-green {
+            color: #1DB954;
+        }
+        .spotify-light-green {
+            color: #A7F3D0;
+        }
+        .spotify-light-green-hover:hover {
+            color: #6EE7B7;
+        }
+        .spotify-green-bg {
+            background-color: #1DB954;
+        }
+        .spotify-green-bg:hover {
+            background-color: #1ED760;
+        }
+
+        /* Hero Section Styling */
+        .hero-section {
+            background-color: #282828; /* Darker card color for hero */
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before { /* Overlay for better text readability */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section .hero-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .hero-section h3 {
+            font-size: 1.75rem; /* ~28px */
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hero-section p {
+            font-size: 0.9rem; /* ~14.4px */
+            color: #b3b3b3;
+            margin-bottom: 16px;
+            max-width: 500px;
+        }
+        .hero-section .btn-hero {
+            padding: 10px 24px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #000000;
+            background-color: #1DB954; /* Spotify Green */
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        .hero-section .btn-hero:hover {
+            background-color: #1ED760;
+            transform: scale(1.05);
+        }
+
+        /* Card Grid Layout */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 16px;
+        }
+
+        /* General Card Styling */
+        .card {
+            background-color: #181818;
+            border-radius: 8px;
+            padding: 16px;
+            transition: background-color 0.2s ease-in-out;
+            overflow: hidden; /* To contain image hover effect */
+        }
+        .card:hover {
+            background-color: #282828;
+        }
+
+        .card-image-container {
+            width: 100%;
+            padding-bottom: 100%; /* 1:1 Aspect Ratio for square images */
+            background-size: cover;
+            background-position: center;
+            border-radius: 6px; /* Rounded corners for images within cards */
+            margin-bottom: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover .card-image-container {
+            transform: scale(1.05); /* Slight zoom on image hover */
+        }
+        
+        .card-avatar-image { /* For artist cards */
+            width: 100%;
+            padding-bottom: 100%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%; /* Circular images for artists */
+            margin-bottom: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
+         .card:hover .card-avatar-image {
+            transform: scale(1.05);
+        }
+
+
+        .card-title {
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 4px;
+            font-size: 1rem; /* 16px */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .card:hover .card-title {
+            color: #A7F3D0; /* Light Greenish on hover */
+        }
+
+        .card-subtitle {
+            font-size: 0.875rem; /* 14px */
+            color: #b3b3b3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .card-artist .card-title { /* Specific for artist cards if needed */
+            text-align: center;
+        }
+        .card-artist .card-subtitle {
+            text-align: center;
+        }
+
+
+        /* Section Margins */
+        .discover-section {
+            margin-bottom: 32px;
+        }
+        .discover-section:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 640px) { /* sm breakpoint */
+            .container {
+                padding: 32px;
+            }
+            .hero-section {
+                flex-direction: row;
+                text-align: left;
+                padding: 32px;
+                gap: 24px;
+            }
+             .hero-section .hero-image {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 0;
+                margin-right: 24px; /* Add some space between image and text */
+            }
+             .hero-section h3 {
+                font-size: 2.25rem; /* ~36px */
+            }
+            .hero-section p {
+                font-size: 1rem; /* ~16px */
+            }
+            .card-grid {
+                grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (min-width: 768px) { /* md breakpoint */
+             h1.page-title {
+                font-size: 2.5rem; /* ~40px */
+            }
+            .card-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 24px;
+            }
+        }
+        
+        @media (min-width: 1024px) { /* lg breakpoint */
+            .card-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        /* Custom scrollbar (WebKit browsers) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #282828;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a3a3a;
+        }
